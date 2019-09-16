@@ -1,0 +1,249 @@
+@import "common.less";
+
+.jxc-banner-issue{
+
+  .swiper-slide{
+    //height: 200px;
+    transform: scale(0.8);
+    //margin: 20px 0 100px;
+    margin-top: 20px;
+    font-size: 0.1rem;
+
+    p{
+      text-align: center;
+      margin: 0.4rem 0 0;
+    }
+  }
+
+  .swiper-slide-active{
+    transform: scale(1);
+    z-index: 1000;
+    color: @txt-color-red;
+
+    p{
+      margin-top: 0.1rem;
+    }
+  }
+
+}
+
+.vip-setting{
+  .row{
+    margin-bottom: 10px;
+  }
+
+  .title{
+    font-weight: bold;
+    font-size: 0.26rem;
+  }
+
+  .choose-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+
+    margin-top: 0.3rem;
+    margin-left: -1.5rem;
+
+    li{
+      //width: 25%;
+      //padding: 10px 0;
+      //cursor: pointer;
+
+      &:before{
+        content: '';
+        display: inline-block;
+        width: .22rem;
+        height: .22rem;
+        vertical-align: middle;
+        margin-right: 6px;
+        background: url("../img/select.png") no-repeat;
+        background-size: contain;
+      }
+
+      &.selected:before{
+        background: url("../img/selected.png") no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.select-options-box{
+  width: 100%;
+  padding: 0 .5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .select-options-title{
+    width: 100%;
+    font-size: .28rem;
+    color:#2A2929;
+    margin-top: .4rem;
+  }
+
+  .choose-box{
+    width: 100%;
+    padding-left:1.8rem;
+    box-sizing: border-box;
+    font-size: .26rem;
+    color:#6A6A6A;
+    display: flex;
+    /*flex-wrap:wrap;*/
+    align-items: center;
+    justify-content: center;
+
+    .select-list{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: .3rem;
+
+
+      &:before{
+        content: '';
+        display: inline-block;
+        width: .22rem;
+        height: .22rem;
+        vertical-align: middle;
+        margin-right: 6px;
+        background: url("../img/select.png") no-repeat;
+        background-size: contain;
+      }
+
+      &.selected:before{
+        background: url("../img/selected.png") no-repeat;
+        background-size: contain;
+      }
+
+      .select-icon{
+        width: .22rem;
+        height: .22rem;
+        margin-right: .1rem;
+        display: block;
+        flex-shrink: 0;
+      }
+    }
+
+
+    /*选中样式*/
+    .active-li{
+      color:#2A2929;
+    }
+
+  }
+
+}
+
+/*预留手机号样式start*/
+.record-phone-box{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+
+  .phone-input{
+    padding:.18rem 2.8rem .14rem .18rem;
+    box-sizing: border-box;
+    border: 1px solid #B5B5B5!important;
+    border-radius: .1rem!important;
+    font-size: .24rem;
+    color:#6A6A6A;
+    margin: .6rem .38rem 0 0;
+  }
+
+
+  .for-free-btn{
+    padding: .18rem .74rem;
+    border: 1px solid #AE2923;
+    border-radius: .1rem;
+    font-size: .24rem;
+    color:#AE2923;
+    margin-top: .6rem;
+    transition: background-color 0.5s;
+
+    &.for-free-btn:hover,.for-free-btn:active{
+      background-color: #AE2923;
+      color:#fff;
+      cursor:pointer;
+    }
+  }
+}
+/*预留手机号样式end*/
+
+.do-box{
+  padding: 0 .5rem;
+  box-sizing: border-box;
+
+  &.secret-margin{
+    margin-bottom: .7rem;
+  }
+
+  .do-img{
+    width:100%;
+    display: block;
+  }
+
+  .dec-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: .3rem;
+  }
+
+  .enc-img{
+    width: 100%;
+    display: block;
+  }
+
+  .study-enc-item{
+    width: 100%;
+    position: relative;
+
+    img{
+      width: 100%;
+      display: block;
+    }
+
+    img,.enc-text{
+      border-radius: .2rem;
+    }
+
+    .enc-text{
+      position: absolute;
+      left: 0;
+      top: 0;
+      right:0;
+      bottom:0;
+      padding: .2rem;
+      box-sizing: border-box;
+      background: rgba(106,106,106,.8);
+      font-size: .28rem;
+      color:#FBFBFC;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &.study-enc-item:hover .enc-text{
+      display: flex;
+    }
+  }
+
+  .student-list{
+    margin-top: .4rem;
+    font-size: .28rem;
+    color:#010101;
+    text-align: center;
+  }
+}
+
+
+

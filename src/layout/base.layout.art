@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes"/>
+    <title>{{block 'title'}}{{/block}} -- 坚小持微课</title>
+    {{block 'baseHead'}}{{/block}}
+</head>
+
+<body>
+    {{block 'baseBody'}}{{/block}}
+    {{block 'baseJs'}}{{/block}}
+</body>

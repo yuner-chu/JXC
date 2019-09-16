@@ -1,0 +1,28 @@
+{{extend './layout/main.layout.art'}}
+
+{{block 'title'}} 首页 {{/block}}
+
+{{block 'head'}}
+    <link rel="stylesheet" href="css/index.css">
+{{/block}}
+
+{{block 'body'}}
+<div class="container-fluid">
+    {{include './components/index-user-plan-setting.html'}}
+
+    {{include './components/index-study-issue.html'}}
+
+    {{include './components/index-how-do.html'}}
+
+    {{include './components/index-study-enc.html'}}
+
+    {{include './components/index-vip-features.html'}}
+
+    {{include './components/index-student.html'}}
+</div>
+{{/block}}
+
+{{block 'js'}}
+<script src="lib/vue.min.js"></script>
+<script src="js/index.js"></script>
+{{/block}}

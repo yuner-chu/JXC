@@ -1,0 +1,34 @@
+{{extend './layout/main1.layout.art'}}
+
+{{block 'title'}} 课程设置 {{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" href="css/page.index.css"/>
+<link rel="stylesheet" href="css/page.course.css"/>
+{{/block}}
+
+{{block 'body'}}
+
+<div class="bg-fff">
+    {{include './components1/index-how-do.html'}}
+</div>
+
+<div class="bg-fff">
+    {{include './components1/college-introduce.html'}}
+</div>
+
+<div class="bg-fff">
+    {{include './components1/special-introduce.html'}}
+</div>
+
+{{include './components1/share-user.html'}}
+{{include './components1/feedback-user.html'}}
+
+
+
+{{/block}}
+
+{{block 'js'}}
+<script src="lib/vue.min.js"></script>
+<script src="js/page.course.js"></script>
+{{/block}}
