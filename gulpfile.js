@@ -50,7 +50,7 @@ gulp.task('default', ["css", "less", "js", "img", "lib", "html"], function() {
 });
 
 //文件变更监控
-var htmlWatcher = gulp.watch([srcDir + "/**/*.art", srcDir + "/components/**/*"], ["html"])
+var htmlWatcher = gulp.watch([srcDir + "/**/*.art", srcDir + "/components/**/*", srcDir + "/components1/**/*"], ["html"])
 gulp.watch(srcDir + "/js/**/*", ["js"])
 gulp.watch(srcDir + "/css/**/*", ["css"])
 gulp.watch(srcDir + "/img/**/*", ["img"])
