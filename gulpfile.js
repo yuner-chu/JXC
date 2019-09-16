@@ -1,6 +1,7 @@
 var path = require("path")
 var gulp = require('gulp');
 var less = require("gulp-less")
+var browserSync = require('browser-sync').create();
 
 var build = require("./build/build.js")
 
@@ -45,7 +46,23 @@ gulp.task("html", function(){
     out("course.page.art", "course.html")
 })
 
-gulp.task('default', ["css", "less", "js", "img", "lib", "html"], function() {
+gulp.task("browser-sync", function(){
+  browserSync.init({
+    ui: false,
+    open: false,
+    notify: false,
+    // ghostMode: {
+    //   clicks: true,
+    //   forms: true,
+    //   scroll: false
+    // },
+    server: {
+        baseDir: "./out"
+    }
+});
+})
+
+gulp.task('default', ["css", "less", "js", "img", "lib", "html", "browser-sync"], function() {
    console.log("执行完成！")
 });
 
@@ -56,6 +73,7 @@ gulp.watch(srcDir + "/css/**/*", ["css"])
 gulp.watch(srcDir + "/img/**/*", ["img"])
 gulp.watch(srcDir + "/less/**/*", ["less"])
 gulp.watch(srcDir + "/less/**/*", ["less"])
+gulp.watch(outDir + "/**/*", browserSync.reload)
 
 htmlWatcher.on("change", function(event){
     console.log("文件改变：" + event.path)
