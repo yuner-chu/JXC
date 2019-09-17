@@ -12,7 +12,9 @@
 {{include './components/share-directory.html'}}
 {{include './components/share-directory.html'}}
 {{include './components/share-directory.html'}}
-{{include './components/top-article.html'}}  
+{{include './components/top-article.html'}}
+{{include './components/form-submit.html'}}
+
 
 {{/block}}
 
