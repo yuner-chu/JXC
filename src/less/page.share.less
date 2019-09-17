@@ -1,0 +1,136 @@
+@widthArticle:100%;
+@marginArticle:4%;
+
+.share-directory-box{
+
+  &.share-directory-padding{
+    padding-top: .7rem;
+  }
+
+  .en-explain{
+    font-size: .24rem;
+    color:#858384;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin: .15rem 0 .3rem;
+  }
+
+  .gray-line{
+    display: inline-block;
+    width: .44rem;
+    height: .02rem;
+    background-color: #A0A0A0;
+  }
+  .en-content{
+    padding: 0 .06rem;
+  }
+
+  .article-padding{
+    padding-top: .3rem;
+  }
+
+  .recom-article-box{
+    background-color: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    .article-img{
+      position: relative;
+
+      img{
+        width: 100%;
+        display: block;
+      }
+
+      &.article-img:after{
+        content:'';
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 20px solid #fff;
+        border-bottom: 10px solid transparent;
+        border-top: 10px solid transparent;
+        position: absolute;
+        right: 0;
+        top:18%;
+      }
+    }
+    .article-content{
+      padding: .27rem .3rem;
+      box-sizing: border-box;
+      font-size: .24rem;
+      color:#555766;
+    }
+
+    .article-title{
+      font-size: .28rem;
+      color:#101323;
+      font-weight: 500;
+      margin-bottom: .2rem;
+    }
+  }
+
+  .article-list-box{
+    background-color: #fff;
+    padding: 0.27rem 0 .27rem  0.3rem;
+    box-sizing: border-box;
+    margin-top: .3rem;
+
+    .article-list-title{
+      font-size: .26rem;
+      color:#000;
+      font-weight: 500;
+    }
+    .article-ul{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-size: .24rem;
+      color:#525151;
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+    .article-list{
+      width: 50%;
+      padding-right: .27rem;
+      box-sizing: border-box;
+      //max-width: 4rem;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
+  }
+}
+
+.top-article-box{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: .7rem;
+  line-height: 2;
+  font-size: .24rem;
+  color:#000;
+  font-weight: 500;
+
+  .top-article-left-box,.top-article-right-box{
+    width: ((@widthArticle - @marginArticle)/2);
+    background-color: #fff;
+    padding: .3rem;
+    box-sizing: border-box;
+
+    .top-article-title{
+      font-size: .26rem;
+    }
+    .top-article-list{
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
+  }
+
+}

@@ -1,6 +1,7 @@
 @import "common.less";
 
 .jxc-banner-issue{
+  color:@bg-fff;
 
   .swiper-slide{
     //height: 200px;
@@ -9,9 +10,21 @@
     margin-top: 20px;
     font-size: 0.1rem;
 
-    p{
-      text-align: center;
-      margin: 0.4rem 0 0;
+    .alien-swiper-box{
+      position: relative;
+    }
+
+    .alien-tip{
+      height: .8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      //margin: 0.4rem 0 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom:0;
+      background: rgba(0,0,0,.4);
     }
   }
 

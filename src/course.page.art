@@ -1,4 +1,4 @@
-{{extend './layout/main1.layout.art'}}
+{{extend './layout/main.layout.art'}}
 
 {{block 'title'}} 课程设置 {{/block}}
 
@@ -10,19 +10,19 @@
 {{block 'body'}}
 
 <div class="bg-fff">
-    {{include './components1/index-how-do.html'}}
+    {{include './components/index-how-do.html'}}
 </div>
 
 <div class="bg-fff">
-    {{include './components1/college-introduce.html'}}
+    {{include './components/college-introduce.html'}}
 </div>
 
 <div class="bg-fff">
-    {{include './components1/special-introduce.html'}}
+    {{include './components/special-introduce.html'}}
 </div>
 
-{{include './components1/share-user.html'}}
-{{include './components1/feedback-user.html'}}
+{{include './components/share-user.html'}}
+{{include './components/feedback-user.html'}}
 
 
 

@@ -93,13 +93,13 @@ h3{
   font-weight: bold;
   font-size: 0.4rem;
   text-align: center;
-  line-height: 1.5;
+  //line-height: 1.5;
 
   &.line:after{
     content: '';
     display: block;
     width: 1.82rem;
-    height: 0.04rem;
+    height: 0.05rem;
     margin: 0.2rem auto 0;
     background-color: @txt-color-red;
   }
@@ -123,7 +123,9 @@ h3{
   padding: .99rem .7rem;
   box-sizing: border-box;
 }
-
+.padding-none{
+  padding-bottom:0!important;
+}
 .share-box{
   width: 100%;
   background-color: #fff;
@@ -212,8 +214,10 @@ h3{
 
 .footer-box{
   width: 100%;
-  margin-top: .85rem;
+  padding-top: .85rem;
+  background-color: @bg-fff;
 }
+
 .footer-box img{
   width: 100%;
 }

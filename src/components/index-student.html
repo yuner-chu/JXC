@@ -1,29 +1,23 @@
 <!-- 怎么学 -->
-    <div class="student-num-box">
-        <!--标题-->
-        <div class="jxc-title-box">
-            <div>坚小持定制VIP英语课程</div>
-            <span class="jxc-line"></span>
-        </div>
-        {{set studentList = [{
-            introduce: "私人定制",
-            img: "img/vip_icon1.png"
-        }, {
-            introduce: "精选外教",
-            img: "img/vip_icon2.png"
-        }, {
-            introduce: "专属老师",
-            img: "img/vip_icon3.png"
-        }, {
-            introduce: "优质课程",
-            img: "img/vip_icon1.png"
-        }]}}
+    <div class="jxc-container padding container-fluid">
+        <h3 class="jxc-title line">看20万学员如何学英语</h3>
+
         <div class="row do-box">
-            {{each studentList}}
             <div class="col-12 col-sm-6 col-md-6 col-lg-6 student-list">
-                <img src="{{$value.img}}" class="enc-img"/>
-                <span>{{$value.introduce}}</span>
+                <img src="https://xy.jianxc.com/jxcxyrootFolder/appImg/img/bubuzheng.jpg" class="enc-img"/>
+                <span>上课灵活</span>
             </div>
-            {{/each}}
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 student-list">
+                <img src="https://xy.jianxc.com/jxcxyrootFolder/appImg/img/fangtianxia.jpg" class="enc-img"/>
+                <span>1v1外教+中教</span>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 student-list">
+                <img src="https://xy.jianxc.com/jxcxyrootFolder/appImg/img/bubuzheng.jpg" class="enc-img"/>
+                <span>上课灵活</span>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 student-list">
+                <img src="https://xy.jianxc.com/jxcxyrootFolder/appImg/img/fangtianxia.jpg" class="enc-img"/>
+                <span>1v1外教+中教</span>
+            </div>
         </div>
     </div>
