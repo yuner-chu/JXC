@@ -1,0 +1,21 @@
+{{extend './layout/main.layout.art'}}
+
+{{block 'title'}} 教学服务 {{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" href="css/page.index.css"/>
+<link rel="stylesheet" href="css/page.service.css"/>
+{{/block}}
+
+{{block 'body'}}
+{{include './components/index-study-enc.html'}}
+{{include './components/top-article.html'}}
+{{include './components/banner.html'}}
+
+
+{{/block}}
+
+{{block 'js'}}
+<script src="lib/vue.min.js"></script>
+<script src="js/page.service.js"></script>
+{{/block}}

@@ -1,2 +1,32 @@
 <!--表单提交-->
 <!--姓名，电话，地区-->
+<div class="share-directory-box jxc-container padding-bottom">
+    <h3 class="jxc-title">表单提交</h3>
+    <!--副标题-->
+    <div class="en-explain">
+        <span class="gray-line"></span>
+        <div class="en-content">Form submission</div>
+        <span class="gray-line"></span>
+    </div>
+
+    <!--表单内容-->
+    <div class="user-msg-box">
+        <!--姓名-->
+        <div class="input-box">
+            <input type="text" class="input-style" placeholder="姓名:" id="userName"/>
+        </div>
+        <!--电话-->
+        <div class="input-box">
+            <input type="text" pattern="\d*" maxlength="11" class="input-style" placeholder="电话:" id="userPhone"/>
+        </div>
+        <!--地区-->
+        <div class="input-box">
+            <input type="text" class="input-style" placeholder="地区:" id="userAddress"/>
+        </div>
+    </div>
+
+    <!--免费定制-->
+    <div class="record-phone-box">
+        <div class="for-free-btn" onclick="formSubmit()">免费定制</div>
+    </div>
+</div>

@@ -22,8 +22,8 @@
             <!--选项-->
             <ul class="row choose-box">
                 <li :class=" 'col-6 col-sm-3 col-md-3 col-lg-3 select-list ' + (chooseItem.value != chooseData[conditionItem.dataKey] ? '' : 'selected')"
-                     v-for="(chooseItem,index) in conditionItem.chooseCondition"
-                     v-on:click="chooseOption(index,conditionIndex)" v-text="chooseItem.label">
+                 v-for="(chooseItem,index) in conditionItem.chooseCondition"
+                 v-on:click="chooseOption(index,conditionIndex)" v-text="chooseItem.label">
                 </li>
             </ul>
         </div>
