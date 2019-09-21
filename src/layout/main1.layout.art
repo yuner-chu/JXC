@@ -18,13 +18,14 @@
 {{/block}}
 
 {{block 'baseBody'}}
+    {{block 'render'}}{{/block}}
     <div class="jxc-container jxc-nav">
         <div>
             <img src="img/logo.png" class="logo"/>
         </div>
         <ul class="menu">
-            <li>首页</li>
-            <li>课程设置</li>
+            <li class='{{mainMenuCode =="menu_index" ? "active" : ""}}'>首页</li>
+            <li class='{{mainMenuCode =="menu_index1" ? "active" : ""}}'>课程设置</li>
             <li>师资团队</li>
             <li>学习分享</li>
             <li>教学服务</li>

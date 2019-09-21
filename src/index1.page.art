@@ -2,6 +2,10 @@
 
 {{block 'title'}} 新的页面 {{/block}}
 
+{{block 'render'}}
+  {{($data.mainMenuCode = "menu_index") != null ? '' : ''}}
+{{/block}}
+
 {{block 'head'}}
 <link rel="stylesheet" href="css/page.index.css"/>
 {{/block}}
