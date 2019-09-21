@@ -1,0 +1,28 @@
+{{extend './layout/main.layout.art'}}
+
+{{block 'title'}} 首页 {{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" href="css/page.index.css"/>
+<link rel="stylesheet" href="css/page.free.css"/>
+{{/block}}
+
+{{block 'body'}}
+
+
+{{include './components/trial-class.html'}}
+{{include './components/top-article.html'}}
+{{include './components/form-submit.html'}}
+{{include './components/share-user.html'}}
+{{include './components/feedback-user.html'}}
+{{include './components/banner.html'}}
+
+
+
+
+{{/block}}
+
+{{block 'js'}}
+<script src="lib/vue.min.js"></script>
+<script src="js/page.index.js"></script>
+{{/block}}

@@ -1,0 +1,21 @@
+{{extend './layout/main.layout.art'}}
+
+{{block 'title'}} 师资团队 {{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" href="css/page.index.css"/>
+<link rel="stylesheet" href="css/page.teacher.css"/>
+{{/block}}
+
+{{block 'body'}}
+
+{{include './components/teacher-introduce.html'}}
+{{include './components/share-user.html'}}
+{{include './components/feedback-user.html'}}
+
+{{/block}}
+
+{{block 'js'}}
+<script src="lib/vue.min.js"></script>
+<script src="js/page.teacher.js"></script>
+{{/block}}
