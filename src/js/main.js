@@ -52,3 +52,14 @@ new Swiper('.jxc-special', {
         prevEl: '.swiper-button-gray-prev',
     },
 });
+
+
+//学院介绍轮播图
+new Swiper('.jxc-college', {
+    centeredSlides : true,
+    loop:true,
+    navigation: {
+        nextEl: '.swiper-college-button-next',
+        prevEl: '.swiper-college-button-prev',
+    },
+});

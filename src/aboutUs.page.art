@@ -1,0 +1,27 @@
+{{extend './layout/main.layout.art'}}
+
+{{block 'title'}} 联系我们 {{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" href="css/page.index.css"/>
+<link rel="stylesheet" href="css/page.share.css"/>
+<link rel="stylesheet" href="css/page.aboutUs.css"/>
+{{/block}}
+
+{{block 'body'}}
+{{include './components/index-aboutUs.html'}}
+{{include './components/form-submit.html'}}
+
+  
+   
+    
+
+
+
+
+{{/block}}
+
+{{block 'js'}}
+<script src="lib/vue.min.js"></script>
+<script src="js/page.index.js"></script>
+{{/block}}

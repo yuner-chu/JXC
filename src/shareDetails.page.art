@@ -1,0 +1,22 @@
+{{extend './layout/main.layout.art'}}
+
+{{block 'title'}} 学习分享 {{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" href="css/page.index.css"/>
+<link rel="stylesheet" href="css/page.share.css"/>
+<link rel="stylesheet" href="css/page.shareDetails.css"/>
+{{/block}}
+
+{{block 'body'}}
+{{include './components/shareDetails.html'}}
+{{include './components/top-article.html'}}
+{{include './components/change-atricle.html'}}
+
+
+{{/block}}
+
+{{block 'js'}}
+<script src="lib/vue.min.js"></script>
+<script src="js/page.share.js"></script>
+{{/block}}

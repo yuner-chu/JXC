@@ -47,6 +47,8 @@ gulp.task("html", function(){
     out("share.page.art", "share.html");
     out("service.page.art", "service.html");
     out("free.page.art", "free.html");
+    out("aboutUs.page.art","aboutUs.html");
+    out("shareDetails.page.art","shareDetails.html");
 });
 
 gulp.task("browser-sync", function(){

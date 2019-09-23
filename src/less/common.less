@@ -30,11 +30,13 @@ ul{
 }
 a{
   text-decoration:none;
-  color: @bg-fff;
+  //color: @bg-fff;
+  color:#010101;
 }
 a:hover{
   text-decoration:none;
-  color: @txt-color-red;
+  //color: @txt-color-red;
+  color:#010101;
 }
 h3{
   margin-bottom: 0;
@@ -275,10 +277,18 @@ input[type=text]{
     .top-article-title{
       font-size: .26rem;
     }
-    .top-article-list{
-      overflow:hidden;
-      text-overflow:ellipsis;
-      white-space:nowrap;
+
+    .top-article-right-img, .top-article-left-img{
+      display: block;
+      width: 100%;
+      height: 1.61rem;
+      // margin: 0 auto;
+    }
+
+    .top-article-list {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 }
@@ -327,5 +337,29 @@ input[type=text]{
     width: 100%;
   }
 }
+
+.change-atricle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+
+  .last,
+  .next {
+    width: ((@widthArticle - @marginArticle)/2);
+    height: 0.90rem;
+    font-size: 0.3rem;
+    font-weight: bold;
+    color: rgba(27, 26, 26, 1);
+    background: rgba(255, 255, 255, 1);
+    border: 0.01rem solid rgba(191, 191, 191, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
 
 @import "banner.less";
