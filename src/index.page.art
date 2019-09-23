@@ -16,12 +16,17 @@
     {{include './components/share-user.html'}}
     {{include './components/feedback-user.html'}}
 
-
-
-
+    <div class="bg-fff">
+      {{include './components/slideshow-course-description.html'}}
+    </div>
 {{/block}}
 
 {{block 'js'}}
 <script src="lib/vue.min.js"></script>
 <script src="js/page.index.js"></script>
+<script>
+  $.ajax({
+    url: "/api/netStudentSharing/getStudentSharing"
+  })
+</script>
 {{/block}}

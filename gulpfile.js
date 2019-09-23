@@ -2,6 +2,7 @@ var path = require("path");
 var gulp = require('gulp');
 var less = require("gulp-less");
 var browserSync = require('browser-sync').create();
+var proxyMiddleware = require('http-proxy-middleware');
 
 var build = require("./build/build.js");
 
@@ -49,6 +50,19 @@ gulp.task("html", function(){
     out("free.page.art", "free.html");
 });
 
+/**
+ * 代理设置
+ * 
+ */
+var middleware = proxyMiddleware('/api', {
+  target: 'http://website.jianxc.com/jxcwebsite',
+  changeOrigin: true,
+  pathRewrite: {
+    '^/api': ''
+  },
+  logLevel: 'debug'
+})
+
 gulp.task("browser-sync", function(){
   browserSync.init({
     ui: false,
@@ -60,7 +74,9 @@ gulp.task("browser-sync", function(){
     //   scroll: false
     // },
     server: {
-        baseDir: "./out"
+        baseDir: "./out",
+        index: 'index.html',
+        middleware: middleware
     }
   });
 });
