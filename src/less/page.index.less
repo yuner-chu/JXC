@@ -254,5 +254,57 @@
   }
 }
 
+/*移动位置*/
+.jxc-banner-course-description{
+  height: 600px;
 
+  img{
+    height: 100%;
+    width: 100%;
+  }
+
+  .banner-viewer{
+    height: 500px;
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  .banner-control{
+    height: 180px;
+    margin-top: -80px;
+    position: relative;
+    
+    display: flex;
+    justify-content: space-between;
+
+    .banner-content{
+      height: 100%;
+      width: 300px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: #000;
+      z-index: 1;
+    }
+
+    .banner-preview{
+      height: 100%;
+      position: absolute;
+      left: 300;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      
+      .swiper-slide{
+        width: 100px;
+        height: 100px;
+        margin: 0 20px;
+        
+        img{
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
 
