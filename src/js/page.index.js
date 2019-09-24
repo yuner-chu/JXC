@@ -44,7 +44,33 @@ $(function(){
         }
     });
 
+    //初始化课程介绍轮播
+    function initCourseDescription(){
+      var viewSwiper = new Swiper(".jxc-banner-course-description .banner-viewer", {
+        loop : true
+      });
 
+      var previewSwiper = new Swiper(".jxc-banner-course-description .banner-control .swiper-container", {
+        //autoplay: true,
+        slidesPerView : 5,
+        centeredSlides : true,
+        spaceBetween: 30,
+        loop : true,
+      });
+
+      $('.jxc-banner-course-description .banner-control .arrow-left').on('click', function(e) {
+				e.preventDefault();
+				previewSwiper.slidePrev();
+				viewSwiper.slidePrev();
+			})
+			$('.jxc-banner-course-description .banner-control .arrow-right').on('click', function(e) {
+        e.preventDefault();
+				previewSwiper.slideNext();
+				viewSwiper.slideNext();
+			})
+
+    }
+    initCourseDescription();
 })
 
 //var vipSettingVM = new Vue({

@@ -266,13 +266,13 @@
   .banner-viewer{
     height: 500px;
     overflow: hidden;
-    z-index: 2;
   }
 
   .banner-control{
     height: 180px;
     margin-top: -80px;
     position: relative;
+    z-index: 1;
     
     display: flex;
     justify-content: space-between;
@@ -290,18 +290,51 @@
     .banner-preview{
       height: 100%;
       position: absolute;
-      left: 300;
+      left: 300px;
       right: 0;
-      bottom: 0;
-      z-index: 1;
-      
-      .swiper-slide{
-        width: 100px;
-        height: 100px;
-        margin: 0 20px;
-        
-        img{
-          border-radius: 50%;
+      text-align: center;
+      padding: 40px 20px;
+
+      .arrow{
+        display: inline-block;
+        width: 30px;
+        height: 50px;
+        background: #AE2923;
+        position: absolute;
+        top: 65px;
+      }
+
+      .arrow-left{
+        left: 20px;
+      } 
+
+      .arrow-right{
+        right: 20px;
+      }
+
+      .swiper-container{
+        display: inline-block;
+        width: 620px;
+
+        .swiper-slide{
+          width: 100px;
+          height: 100px;
+          transform: scale(0.6);
+          // margin: 0 15px;
+          
+          img{
+            border-radius: 50%;
+            border: 3px solid #fff;
+          }
+
+          &.swiper-slide-active{
+            transform: scale(1)
+          }
+          
+          &.swiper-slide-prev,
+          &.swiper-slide-next{
+            transform: scale(0.8)
+          }
         }
       }
     }
