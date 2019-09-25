@@ -364,13 +364,18 @@ input[type=text]{
   }
 }
 
-.jxc-swiper-view{
-  overflow: hidden;
-  margin-top: 0.38rem;
+.jxc-buzhidaojiaoshenme{
   position: relative;
-  padding-bottom: 1.6rem;
-  background-color: #f1f1f1;
+  padding-bottom: 1.6rem!important;
 
+  .jxc-swiper-view{
+    overflow: hidden;
+    margin-top: 0.38rem;
+    position: relative;
+    // padding-bottom: 1.6rem;
+    background-color: #f1f1f1;
+  
+  }
 
   .focus-banner-box{
     width: 100%;
@@ -381,8 +386,8 @@ input[type=text]{
     display: flex;
     align-items: center;
     justify-content: center;
-
-
+  
+  
     .focus-desc-content{
       background: url("../img/desc.png") no-repeat;
       background-size: 100% 100%;
@@ -397,7 +402,7 @@ input[type=text]{
       justify-content: center;
       color:#FCFCFC;
       line-height: 2;
-
+  
       .focus-title{
         font-size: 16px;
         width: 2.5rem;
@@ -414,7 +419,7 @@ input[type=text]{
         overflow: hidden;
       }
     }
-
+  
     .focus-change-box{
       width: 75%;
       padding: 0 .4rem;
@@ -422,7 +427,7 @@ input[type=text]{
       display: flex;
       align-items: center;
       justify-content: center;
-
+  
       .change-icon{
         width: .8rem;
         //height: .8rem;
@@ -435,7 +440,7 @@ input[type=text]{
         align-items: center;
         justify-content: center;
         transform: scale(0.8);
-
+  
         &.swiper-slide-active{
           transform: scale(1);
           img{
@@ -443,7 +448,7 @@ input[type=text]{
             display: block;
           }
         }
-
+  
         img{
           width: 1.5rem;
           height: 1.5rem;
@@ -453,9 +458,10 @@ input[type=text]{
         }
       }
     }
-  }
-
+  }  
 }
+
+
 
 
 @import "banner.less";
