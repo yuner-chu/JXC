@@ -477,7 +477,7 @@ function showSee(data){
                     <img src="${item.imgUrl}" alt=""/>
                 </a>
             </div>`
-        str1+=`<div class="swiper-slide slide-active-nav swiper-no-swiping">
+        str1+=`<div class="swiper-slide slide-active-nav">
                 <a href="###">
                     <img src="${item.imgUrl}" alt=""/>
                 </a>
@@ -486,7 +486,7 @@ function showSee(data){
     $("#viewSwiperContent").html(str);
     $("#focusContent").html(str1);
     //主轮播
-    var  swiperView =new Swiper(".jxc-swiper-view",{
+    var swiperView =new Swiper(".jxc-swiper-view",{
         loop:true,
         thumbs: {
             swiper: {
@@ -494,7 +494,16 @@ function showSee(data){
                 slidesPerView: 5,
                 centeredSlides : true,
                 spaceBetween: 30,
-                loop : true
+                loop : true,
+                // on:{
+                //   slideChange: function(){
+                //     var index = this.activeIndex
+                //     console.log(index, swiperView)
+                //     if(swiperView){
+                //       swiperView.slideTo(this.activeIndex)
+                //     }
+                //   },
+                // },
             }
         }
     });
