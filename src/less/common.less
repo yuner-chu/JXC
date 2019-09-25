@@ -364,6 +364,98 @@ input[type=text]{
   }
 }
 
+.jxc-swiper-view{
+  overflow: hidden;
+  margin-top: 0.38rem;
+  position: relative;
+  padding-bottom: 1.6rem;
+  background-color: #f1f1f1;
+
+
+  .focus-banner-box{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom:0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .focus-desc-content{
+      background: url("../img/desc.png") no-repeat;
+      background-size: 100% 100%;
+      //width: 2.75rem;
+      //height: 2.65rem;
+      width: 25%;
+      padding: .25rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color:#FCFCFC;
+      line-height: 2;
+
+      .focus-title{
+        font-size: 16px;
+        width: 2.5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: 500;
+      }
+      .focus-contents{
+        font-size: 12px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+      }
+    }
+
+    .focus-change-box{
+      width: 75%;
+      padding: 0 .4rem;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .change-icon{
+        width: .8rem;
+        //height: .8rem;
+        display: block;
+      }
+      .slide-active-nav{
+        //width: 1rem;
+        //height: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0.8);
+
+        &.swiper-slide-active{
+          transform: scale(1);
+          img{
+            border: .04rem solid #D92121;
+            display: block;
+          }
+        }
+
+        img{
+          width: 1.5rem;
+          height: 1.5rem;
+          border-radius: 50%;
+          border: .04rem solid #fff;
+          display: block;
+        }
+      }
+    }
+  }
+
+}
 
 
 @import "banner.less";

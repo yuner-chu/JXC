@@ -1,4 +1,4 @@
-{{extend './layout/main1.layout.art'}}
+{{extend './layout/main.layout.art'}}
 
 {{block 'title'}} 新的页面 {{/block}}
 

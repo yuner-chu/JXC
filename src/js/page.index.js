@@ -452,6 +452,83 @@ function issueHtmlData(issueData){
 
 
 
+var newData = {
+    imgInfo: [{
+        imgUrl: "https://xy.jianxc.com/jxcxyrootFolder/appImg/img/bubuzheng.jpg"
+    }, {
+        imgUrl: "https://xy.jianxc.com/jxcxyrootFolder/appImg/img/banner.jpg"
+    }, {
+        imgUrl: "https://xy.jianxc.com/jxcxyrootFolder/appImg/img/fangtianxia.jpg"
+    }, {
+        imgUrl: "https://xy.jianxc.com/jxcxyrootFolder/appImg/img/bubuzheng.jpg"
+    }, {
+        imgUrl: "https://xy.jianxc.com/jxcxyrootFolder/appImg/img/banner.jpg"
+    }, {
+        imgUrl: "https://xy.jianxc.com/jxcxyrootFolder/appImg/img/fangtianxia.jpg"
+    }]
+};
+
+function showSee(data){
+    var str = '';
+    var str1 = '';
+    data.imgInfo.map(item=>{
+        str+=`<div class="swiper-slide swiper-no-swiping">
+                <a href="###">
+                    <img src="${item.imgUrl}" alt=""/>
+                </a>
+            </div>`
+        str1+=`<div class="swiper-slide slide-active-nav swiper-no-swiping">
+                <a href="###">
+                    <img src="${item.imgUrl}" alt=""/>
+                </a>
+            </div>`
+    });
+    $("#viewSwiperContent").html(str);
+    $("#focusContent").html(str1);
+    //主轮播
+    var  swiperView =new Swiper(".jxc-swiper-view",{
+        loop:true,
+        thumbs: {
+            swiper: {
+                el: '.swiper-focus',
+                slidesPerView: 5,
+                centeredSlides : true,
+                spaceBetween: 30,
+                loop : true
+            }
+        }
+    });
+    /* //焦点轮播
+     swiperFocus = new Swiper(".swiper-focus", {
+     //autoplay: true,
+     slidesPerView : 5,
+     centeredSlides : true,
+     spaceBetween: 30,
+     loop : true,
+     //autoplay: {
+     //    disableOnInteraction: true,
+     //}
+     });*/
+
+    //上一个
+    $("#arrowLeft").on('click', function(e) {
+        e.preventDefault();
+        swiperView.slidePrev();
+        swiperView.thumbs.swiper.slidePrev();
+    });
+
+    //下一个
+    $("#arrowRight").on('click', function(e) {
+        e.preventDefault();
+        swiperView.slideNext();
+        swiperView.thumbs.swiper.slideNext();
+    })
+
+
+}
+showSee(newData);
+
+
 
 
 

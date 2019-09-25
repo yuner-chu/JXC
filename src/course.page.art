@@ -1,4 +1,4 @@
-{{extend './layout/main.layout.art'}}
+{{extend './layout/main1.layout.art'}}
 
 {{block 'title'}} 课程设置 {{/block}}
 

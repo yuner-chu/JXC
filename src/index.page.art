@@ -6,10 +6,6 @@
 <link rel="stylesheet" href="css/page.index.css"/>
 {{/block}}
 
-{{block 'render'}}
-  {{($data.mainMenuCode = "menu_index") != null ? '' : ''}}
-{{/block}}
-
 {{block 'body'}}
     {{include './components/index-user-plan-setting.html'}}
     {{include './components/index-study-issue.html'}}
@@ -23,15 +19,18 @@
     <div class="bg-fff">
       {{include './components/slideshow-course-description.html'}}
     </div>
+
+    {{include './components/alien-swiper.html'}}
+
+
 {{/block}}
 
 {{block 'js'}}
 <script src="lib/vue.min.js"></script>
 <script src="js/page.index.js"></script>
 <script>
-  // $.ajax({
-  //   url: "/api/netStudentSharing/getStudentSharing"
-  // })
-  
+  $.ajax({
+    url: "/api/netStudentSharing/getStudentSharing"
+  })
 </script>
 {{/block}}
