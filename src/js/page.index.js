@@ -12,6 +12,10 @@ $(function(){
         pagination: {
             clickable :true,
         },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
         watchSlidesProgress: true,
         on: {
             progress: function(progress) {

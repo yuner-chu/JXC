@@ -1,6 +1,9 @@
 var path = require("path");
 var gulp = require('gulp');
 var less = require("gulp-less");
+//var uglify = require('gulp-uglify');// 获取 uglify 模块（用于压缩 JS）
+
+
 var browserSync = require('browser-sync').create();
 var proxyMiddleware = require('http-proxy-middleware');
 
@@ -52,6 +55,17 @@ gulp.task("html", function(){
     out("shareDetails.page.art","shareDetails.html");
 });
 
+// 压缩 js 文件
+// 在命令行使用 gulp script 启动此任务
+//gulp.task('script', function() {
+//    // 1\. 找到文件
+//    gulp.src([srcDir + "/js/page.index.js"])
+//        .pipe(babel())
+//        // 2\. 压缩文件
+//        .pipe(uglify())
+//        // 3\. 另存压缩后的文件
+//        .pipe(gulp.dest('js'))
+//});
 /**
  * 代理设置
  * 
